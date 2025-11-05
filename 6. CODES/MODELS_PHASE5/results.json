@@ -1,0 +1,96 @@
+{
+  "model_config": {
+    "cnn_filters": [
+      16,
+      32,
+      64
+    ],
+    "lstm_units": 32,
+    "dense_units": [
+      32,
+      16
+    ],
+    "dropout_rate": 0.4,
+    "l2_reg": 0.01
+  },
+  "loss_config": {
+    "classification_weight": 0.4,
+    "regression_weight": 0.6,
+    "peak_threshold": 0.5,
+    "target_height": 0.7,
+    "peak_weight": 0.5
+  },
+  "training_config": {
+    "n_models": 3,
+    "seeds": [
+      42,
+      123,
+      456
+    ],
+    "epochs": 30,
+    "batch_size": 64,
+    "learning_rate": 0.001
+  },
+  "augmentation_config": {
+    "noise_std": 0.01,
+    "jitter_range": 2,
+    "feature_dropout": 0.1
+  },
+  "ensemble_metrics": {
+    "classification": {
+      "accuracy": 0.8276031434184676,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0
+    },
+    "regression": {
+      "mae": 0.163966566324234,
+      "mse": 0.08844081312417984,
+      "rmse": 0.29739000172194735,
+      "r2": -0.0003801584243774414,
+      "direction_accuracy": 0.20235756385068762
+    }
+  },
+  "signal_strength_analysis": {
+    "strong_signals": {
+      "count": 257,
+      "mae": 0.7742099165916443,
+      "direction_accuracy": 0.6731517509727627
+    },
+    "weak_signals": {
+      "count": 1779,
+      "mae": 0.07580885291099548,
+      "direction_accuracy": 0.134345137717819
+    }
+  },
+  "individual_model_gaps": [
+    {
+      "model": 1,
+      "seed": 42,
+      "epochs_trained": 27,
+      "best_val_loss": 0.3495118319988251,
+      "final_train_loss": 0.36324262619018555,
+      "final_val_loss": 0.34995710849761963,
+      "overfitting_gap": -0.013285517692565918
+    },
+    {
+      "model": 2,
+      "seed": 123,
+      "epochs_trained": 30,
+      "best_val_loss": 0.34713849425315857,
+      "final_train_loss": 0.37611299753189087,
+      "final_val_loss": 0.35394662618637085,
+      "overfitting_gap": -0.02216637134552002
+    },
+    {
+      "model": 3,
+      "seed": 456,
+      "epochs_trained": 30,
+      "best_val_loss": 0.34221315383911133,
+      "final_train_loss": 0.3641148805618286,
+      "final_val_loss": 0.34533554315567017,
+      "overfitting_gap": -0.018779337406158447
+    }
+  ],
+  "ensemble_overfitting_gap": -0.018077075481414795
+}

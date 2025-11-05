@@ -1,0 +1,129 @@
+{
+  "model_config": {
+    "cnn_filters": [
+      32,
+      64,
+      128
+    ],
+    "lstm_units": 64,
+    "dense_units": [
+      64,
+      32
+    ],
+    "dropout_rate": 0.3,
+    "l2_reg": 0.005
+  },
+  "loss_config": {
+    "classification_weight": 0.4,
+    "regression_weight": 0.6,
+    "peak_threshold": 0.5,
+    "target_height": 0.7,
+    "peak_weight": 0.5
+  },
+  "training_config": {
+    "epochs": 50,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "patience": 10
+  },
+  "data_info": {
+    "assets": [
+      "EURUSD",
+      "GBPUSD",
+      "USDJPY",
+      "USDCAD",
+      "USDCHF"
+    ],
+    "total_train_samples": 21776,
+    "total_val_samples": 4665,
+    "total_test_samples": 4669,
+    "window_size": 60,
+    "n_features": 5
+  },
+  "combined_test_metrics": {
+    "classification": {
+      "accuracy": 0.9867209252516599,
+      "precision": 0.9867209252516599,
+      "recall": 1.0,
+      "f1_score": 0.9933160845191893
+    },
+    "regression": {
+      "mae": 40.049407958984375,
+      "mse": 3362.80908203125,
+      "rmse": 57.989732556990205,
+      "r2": -0.006439328193664551,
+      "direction_accuracy": 0.6517455557935318
+    }
+  },
+  "per_asset_results": {
+    "EURUSD": {
+      "test_samples": 940,
+      "direction_accuracy": 0.6723404255319149,
+      "mae": 29.38375796558502,
+      "strong_signals": {
+        "count": 925,
+        "direction_accuracy": 0.6832432432432433,
+        "mae": 29.84403576261417
+      }
+    },
+    "GBPUSD": {
+      "test_samples": 940,
+      "direction_accuracy": 0.6638297872340425,
+      "mae": 28.183555762838807,
+      "strong_signals": {
+        "count": 931,
+        "direction_accuracy": 0.6670247046186896,
+        "mae": 28.446942113862004
+      }
+    },
+    "USDJPY": {
+      "test_samples": 940,
+      "direction_accuracy": 0.6372340425531915,
+      "mae": 52.30784271586702,
+      "strong_signals": {
+        "count": 938,
+        "direction_accuracy": 0.6385927505330491,
+        "mae": 52.417250605015866
+      }
+    },
+    "USDCAD": {
+      "test_samples": 940,
+      "direction_accuracy": 0.5627659574468085,
+      "mae": 38.97127950432453,
+      "strong_signals": {
+        "count": 909,
+        "direction_accuracy": 0.581958195819582,
+        "mae": 40.266230478079535
+      }
+    },
+    "USDCHF": {
+      "test_samples": 909,
+      "direction_accuracy": 0.724972497249725,
+      "mae": 51.78772511515286,
+      "strong_signals": {
+        "count": 904,
+        "direction_accuracy": 0.7289823008849557,
+        "mae": 52.06863070408855
+      }
+    }
+  },
+  "signal_strength_analysis": {
+    "strong_signals": {
+      "count": 4607,
+      "mae": 40.575050354003906,
+      "direction_accuracy": 0.6598654221836336
+    },
+    "weak_signals": {
+      "count": 62,
+      "mae": 0.9907904863357544,
+      "direction_accuracy": 0.04838709677419355
+    }
+  },
+  "training_info": {
+    "epochs_trained": 50,
+    "best_val_loss": 1642.1728515625,
+    "final_train_loss": 1011.02783203125,
+    "final_val_loss": 1642.1826171875,
+    "overfitting_gap": 631.15478515625
+  }
+}

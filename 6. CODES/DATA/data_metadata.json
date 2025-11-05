@@ -1,0 +1,50 @@
+{
+  "window_length": 60,
+  "stride": 1,
+  "n_features": 28,
+  "feature_names": [
+    "returns",
+    "log_returns",
+    "hl_spread",
+    "co_spread",
+    "returns_mean_5",
+    "returns_std_5",
+    "close_std_5",
+    "tick_volume_mean_5",
+    "tick_volume_std_5",
+    "rsi_5",
+    "returns_mean_10",
+    "returns_std_10",
+    "close_std_10",
+    "tick_volume_mean_10",
+    "tick_volume_std_10",
+    "rsi_10",
+    "returns_mean_20",
+    "returns_std_20",
+    "close_std_20",
+    "tick_volume_mean_20",
+    "tick_volume_std_20",
+    "rsi_20",
+    "returns_mean_50",
+    "returns_std_50",
+    "close_std_50",
+    "tick_volume_mean_50",
+    "tick_volume_std_50",
+    "rsi_50"
+  ],
+  "n_train": 9496,
+  "n_val": 2034,
+  "n_test": 2036,
+  "train_date_range": [
+    "2015-01-28 04:00:00",
+    "2021-02-11 00:00:00"
+  ],
+  "val_date_range": [
+    "2021-02-11 04:00:00",
+    "2022-06-01 00:00:00"
+  ],
+  "test_date_range": [
+    "2022-06-01 04:00:00",
+    "2023-09-20 08:00:00"
+  ]
+}
