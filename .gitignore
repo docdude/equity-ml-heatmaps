@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Data files
+*.csv
+*.npy
+*.pkl
+*.h5
+*.hdf5
+
+# Model files
+*.keras
+*.h5
+*.pb
+*.ckpt
+*.weights
+*.model
+
+# Large directories
+6. CODES/DATA/*.npy
+6. CODES/DATA/*.pkl
+6. CODES/DATA/*.csv
+6. CODES/DATA/eurusd_*.csv
+6. CODES/DATA/X_*.npy
+6. CODES/DATA/y_*.npy
+
+# Model directories
+6. CODES/MODELS/
+6. CODES/MODELS_PHASE4/
+6. CODES/MODELS_PHASE5/
+6. CODES/MODELS_PHASE6/
+
+# Logs
+*.log
+logs/
+6. CODES/MODELS*/logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary
+*.tmp
+*.bak
+*.cache
