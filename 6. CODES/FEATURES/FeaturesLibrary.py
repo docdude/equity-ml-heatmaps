@@ -90,8 +90,8 @@ def displacement_detection(df, type_range="standard", strengh=3, period=100):
     df_copy.loc[df_copy["displacement"] == 1, "high_displacement"] = df_copy["high"]
     df_copy.loc[df_copy["displacement"] == 1, "low_displacement"] = df_copy["low"]
 
-    df_copy["high_displacement"] = df_copy["high_displacement"].fillna(method="ffill")
-    df_copy["low_displacement"] = df_copy["low_displacement"].fillna(method="ffill")
+    df_copy["high_displacement"] = df_copy["high_displacement"].ffill()
+    df_copy["low_displacement"] = df_copy["low_displacement"].ffill()
 
     return df_copy
 
@@ -140,7 +140,7 @@ def gap_detection(df, lookback=2):
     # Fill the missing values by the last one
     df_copy[["Bullish_gap_sup", "Bullish_gap_inf",
         "Bearish_gap_sup", "Bearish_gap_inf"]] = df_copy[["Bullish_gap_sup", "Bullish_gap_inf",
-                                                     "Bearish_gap_sup", "Bearish_gap_inf"]].fillna(method="ffill")
+                                                     "Bearish_gap_sup", "Bearish_gap_inf"]].ffill()
 
     return df_copy
 
@@ -310,7 +310,7 @@ def DC_market_regime(df, threshold):
         os_events = []
 
         # Initialize the first DC event
-        last_dc_price = df["close"][0]
+        last_dc_price = df["close"].iloc[0]
         last_dc_direction = 0  # +1 for up, -1 for down
 
         # Initialize the current Min & Max for the OS events
@@ -425,7 +425,7 @@ def DC_market_regime(df, threshold):
     for event_down in trend_events_down:
         df_copy.loc[df_copy.index[event_down[1]], "market_regime"] = 0
 
-    df_copy["market_regime"] = df_copy["market_regime"].fillna(method="ffill")
+    df_copy["market_regime"] = df_copy["market_regime"].ffill()
     
     return df_copy
 
